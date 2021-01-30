@@ -1,0 +1,23 @@
+{
+    "name": "dofus-book",
+    "version": "1.0.0",
+    "description": "Bot discord dofus book",
+    "main": "bot.js",
+    "scripts": {
+        "test": "node bot.js"
+    },
+    "author": "Gaëtan Seigneur",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cheerio": "^1.0.0-rc.5",
+        "discord.js": "^12.5.1",
+        "dotenv": "^8.2.0",
+        "ffmpeg-static": "^4.2.7",
+        "fs": "0.0.1-security",
+        "node-cron": "^2.0.3",
+        "opusscript": "0.0.7",
+        "prism-media": "^1.2.3",
+        "ytdl-core": "^4.4.5"
+    }
+}
