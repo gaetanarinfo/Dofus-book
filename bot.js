@@ -4,8 +4,10 @@ const Discord = require('discord.js'),
     commands = require("./commands/commands"),
     msgNew = require("./messages/members"),
     almanax = require("./json/almanax"),
-    cron = require('node-cron'),
-    broadcast = discord.voice.createBroadcast()
+    cron = require('node-cron')
+
+// Connect Database
+require('./api/database/db');
 
 
 // Nouveau membre
@@ -34,6 +36,7 @@ var task = cron.schedule('00 01 00 * * 0-7', () => {
 
 });
 
+// A décommenter en prod
 discord.on("ready", () => {
     const msgWel = discord.channels.cache.get("802179665107484674");
     msgWel.send("🌞 Coucou ! Si tu ne le sais pas fait donc !help en mp pour me découvrir... 🌞").catch(e => console.log(e));
@@ -41,24 +44,23 @@ discord.on("ready", () => {
     const msgAlma = discord.channels.cache.get("802179665107484674");
     msgAlma.send("🌈 Un nouvel Almanax est disponible ! Viens le découvrir !almanax mp moi... 🌈").catch(e => console.log(e));
 
+    const msgActus = discord.channels.cache.get("802179665107484674");
+    msgActus.send("🌵 Regarde dès maintenant les actus dofus pour ne rien manquer ! !actus mp moi... 🌵").catch(e => console.log(e));
+
 });
 
 task.start();
-
-broadcast.play('./audio.mp3', { volume: 0.5 });
-// Play "music.mp3" in all voice connections that the client is in
-for (const connection of discord.voice.connections.values()) {
-    connection.play(broadcast);
-}
-
-broadcast.on('subscribe', dispatcher => {
-    console.log(`Broadcast playing in ${dispatcher.player.voiceConnection.channel.name}`);
-});
 
 discord.login(config.BOT_TOKEN);
 
 discord.on('ready', () => {
     console.log(`Logged in as ${discord.user.tag}!`);
+
+    let channel = discord.channels.cache.get('802180854888923207');
+
+    channel.join()
+        .then(connection => console.log('Connected'))
+        .catch(console.error);
 });
 
 module.exports = {

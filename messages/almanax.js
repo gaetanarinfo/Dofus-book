@@ -3,7 +3,7 @@ const Discord = require('discord.js'),
     fs = require('fs')
 
 // Lire fichier json
-let files = fs.readFileSync('./almanax.json'),
+let files = fs.readFileSync('./json/almanax.json'),
     data = JSON.parse(files)
 
 // Card discord

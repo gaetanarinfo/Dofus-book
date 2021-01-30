@@ -44,7 +44,7 @@ module.exports = almanax => {
             valueArray.escapeSpecialChars()
 
             // Ecrire fichier json
-            fs.writeFile("./almanax.json", valueArray, () => {})
+            fs.writeFile("./json/almanax.json", valueArray, () => {})
         })
 
     .catch(err => {
