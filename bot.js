@@ -30,10 +30,12 @@ discord.on('message', msg => {
 })
 
 //Recharge 1 fois par jour pour le mettre à jour
-var task = cron.schedule('00 01 00 * * 0-7', () => {
+var task = cron.schedule('00 01 * * * *', () => {
 
     almanax()
 
+}, {
+    scheduled: true
 });
 
 // A décommenter en prod
@@ -59,8 +61,14 @@ discord.on('ready', () => {
     let channel = discord.channels.cache.get('802180854888923207');
 
     channel.join()
-        .then(connection => console.log('Connected'))
+        .then(connection => {
+            console.log('Rejoins le channel Audio');
+
+            connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
+
+        })
         .catch(console.error);
+
 });
 
 module.exports = {
