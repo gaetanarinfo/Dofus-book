@@ -1,7 +1,8 @@
 const Discord = require('discord.js'),
     { discord } = require('../bot'),
     prefix = "!",
-    Article = require('../api/database/model/Article')
+    Article = require('../api/database/model/Article'),
+    fs = require('fs')
 
 module.exports = msg => {
     let args = msg.content.substring(prefix.length).split(" ");
@@ -50,6 +51,43 @@ module.exports = msg => {
                     })
             });
             break;
+        case 'classe':
+
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/classes.json'),
+                        data = JSON.parse(files)
+
+                    msg.channel
+                        .send(' | Résultat trouvé : ' + data.length + ' | ');
+
+                    data.forEach(r => {
+                        msg.channel
+                            .send(' | ' + r.title + ' - Personnage : ' + r.order + ' | ');
+                    })
+                });
+                break;
+            } else {
+                let files2 = fs.readFileSync('./json/classes.json'),
+                    data2 = JSON.parse(files2)
+
+                data2.forEach(r => {
+                    if (r.order == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9B47DC')
+                                .setTitle(r.title)
+                                .setURL('http://www.krosmoz.com/fr/almanax?game=dofus')
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.content)
+                                .setThumbnail(r.image2)
+                                .addFields({ name: 'Catégorie', value: r.cat })
+                                .setImage(r.image))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
     }
 
 }

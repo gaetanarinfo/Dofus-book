@@ -4,7 +4,8 @@ const Discord = require('discord.js'),
     commands = require("./commands/commands"),
     msgNew = require("./messages/members"),
     almanax = require("./json/almanax"),
-    cron = require('node-cron')
+    cron = require('node-cron'),
+    prefix = "!"
 
 // Connect Database
 require('./api/database/db');
@@ -25,6 +26,7 @@ discord.on('message', msg => {
 
     if (msg.author.bot) return;
 
+    msg.prefix = prefix;
     commands(msg);
 
 })
@@ -49,9 +51,33 @@ discord.on("ready", () => {
     const msgActus = discord.channels.cache.get("802179665107484674");
     msgActus.send("🌵 Regarde dès maintenant les actus dofus pour ne rien manquer ! !actus mp moi... 🌵").catch(e => console.log(e));
 
+    const msgClasse = discord.channels.cache.get("802179665107484674");
+    msgActus.send("👻 Tu peux voir la liste des personnages en tapant !classe mp moi... 👻").catch(e => console.log(e));
+
 });
 
 task.start();
+
+// Discord music
+var task2 = cron.schedule('* */666 * * *', () => {
+    discord.on('ready', () => {
+
+        then(connection => {
+                console.log('Rejoins le channel Audio');
+
+                connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
+
+            })
+            .catch(console.error);
+
+    })
+
+    console.log('test');
+}, {
+    scheduled: true
+});
+
+task2.start();
 
 discord.login(config.BOT_TOKEN);
 

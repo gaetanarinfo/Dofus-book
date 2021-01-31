@@ -9,7 +9,16 @@ module.exports = {
         .setAuthor(discord.user.username, 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
         .setDescription('Retrouver les commandes utilisable de Dofus Book')
         .setThumbnail('https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-        .addFields({ name: '\`🧡 !help\`', value: "Commande d'aide du bot !" }, { name: '\`💜 !almanax\`', value: "Permet de voir l'almanax du jour !" }, { name: '\`🤎 !actus\`', value: "Permet de voir les dernières actualités !" })
+        .addFields({ name: '\`🧡 !help\`', value: "Commande d'aide du bot !" }, { name: '\`💜 !almanax\`', value: "Permet de voir l'almanax du jour !" }, {
+            name: '\`🤎 !actus\`',
+            value: "Permet de voir les dernières actualités !"
+        }, {
+            name: '\`🖤 !classe\`',
+            value: "Permet de voir la liste des classes des perssonages du jeux par liste !"
+        }, {
+            name: '\`💗 !classe nomdupersonnage\`',
+            value: "Permet de voir la classe du personnage !"
+        })
         .setImage('https://static.ankama.com/ankama/cms/images/273/2020/01/03/1083711.w500h.jpg')
         .setTimestamp()
         .setFooter(discord.user.username, 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
