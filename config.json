@@ -1,1 +1,4 @@
-
+{
+    "BOT_TOKEN": "ODA1MDY3ODg5MzM2OTA5ODU1.YBVf5g.cfsGhwyIfsNVYAsqH6wrHBysE0E",
+    "MONGO_URI": "mongodb+srv://portmongodgaetan:jbptWagLEYxR1l5s@cluster0.gazrh.mongodb.net/dofusbook?retryWrites=true&w=majority"
+}
