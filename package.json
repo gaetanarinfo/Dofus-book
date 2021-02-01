@@ -17,7 +17,6 @@
         "ffmpeg-static": "^4.2.7",
         "fs": "0.0.1-security",
         "mongoose": "^5.11.14",
-        "node-cron": "^2.0.3",
         "pm2": "^4.5.2",
         "ytdl-core": "^4.4.5"
     }

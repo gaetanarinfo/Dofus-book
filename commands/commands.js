@@ -1,11 +1,18 @@
-const Discord = require('discord.js'),
-    { discord } = require('../bot'),
-    prefix = "!",
+const config = require('../config.json'),
     Article = require('../api/database/model/Article'),
     fs = require('fs')
 
 module.exports = msg => {
-    let args = msg.content.substring(prefix.length).split(" ");
+    let args = msg.content.substring(config.prefix.length).split(" ");
+
+    if (args[0] != "help" && args[0] != "almanax" && args[0] != "actus" && args[0] != "classe") {
+        msg.channel
+            .send("🥺 Désoler la commande n'est pas bonne 🥺" + '\n ----------------- \n' + 'Regardes-en dessous pour trouver ton bonheur :')
+            .catch(err => console.log(err));
+        msg.channel
+            .send({ embed: require('../messages/help').embed })
+            .catch(err => console.log(err));
+    }
 
     switch (args[0]) {
         case 'help':
@@ -88,6 +95,7 @@ module.exports = msg => {
                 })
                 break;
             }
+
     }
 
 }
