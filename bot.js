@@ -95,6 +95,8 @@ discord.on('ready', () => {
         })
         .catch(console.error);
 
+    almanax()    
+
 });
 
 module.exports = {
