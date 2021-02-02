@@ -1,11 +1,14 @@
 const config = require('../config.json'),
+    Discord = require('discord.js'),
+    discord = new Discord.Client(),
     Article = require('../api/database/model/Article'),
-    fs = require('fs')
+    fs = require('fs'),
+    getJSON = require('get-json')
 
 module.exports = msg => {
     let args = msg.content.substring(config.prefix.length).split(" ");
 
-    if (args[0] != "help" && args[0] != "almanax" && args[0] != "actus" && args[0] != "classe") {
+    if (args[0] != "help" && args[0] != "almanax" && args[0] != "actus" && args[0] != "classe" && args[0] != "metier") {
         msg.channel
             .send("🥺 Désoler la commande n'est pas bonne 🥺" + '\n ----------------- \n' + 'Regardes-en dessous pour trouver ton bonheur :')
             .catch(err => console.log(err));
@@ -59,7 +62,6 @@ module.exports = msg => {
             });
             break;
         case 'classe':
-
             if (args[1] == undefined) {
                 msg.author.createDM().then(channel => {
                     let files = fs.readFileSync('./json/classes.json'),
@@ -95,7 +97,50 @@ module.exports = msg => {
                 })
                 break;
             }
+        case 'metier':
+
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+
+                    getJSON('https://fr.dofus.dofapi.fr/professions', function(err, res) {
+
+                        msg.channel
+                            .send(' | Résultat trouvé : ' + res.length + ' | ');
+
+                        res.forEach(r => {
+                            msg.channel
+                                .send(' | ' + r.name + ' | ');
+                        })
+
+                    })
+
+                })
+                break;
+            } else {
+
+                getJSON('https://fr.dofus.dofapi.fr/professions', function(err, res) {
+
+                    res.forEach(r => {
+                        if (r.name == args[1]) {
+                            msg.channel
+                                .send(new Discord.MessageEmbed()
+                                    .setColor('#9B47DC')
+                                    .setTitle(r.name)
+                                    .setURL(r.url)
+                                    .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                    .setDescription(r.description)
+                                    .setThumbnail(r.imgUrl)
+                                    .setImage(r.imgUrl))
+                                .catch(err => console.log(err));
+                        }
+                    })
+
+                })
+
+                break;
+            }
+
+
 
     }
-
 }
