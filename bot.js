@@ -1,8 +1,12 @@
-const Discord = require('discord.js'),
+const livereload = require('livereload'),
+    reload = livereload.createServer(),
+    Discord = require('discord.js'),
     discord = new Discord.Client(),
     config = require("./config.json"),
     commands = require("./commands/commands"),
     almanax = require("./json/almanax")
+
+reload.watch(__dirname + "/bots.js")
 
 // Connect Database
 require('./api/database/db');

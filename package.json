@@ -4,7 +4,7 @@
     "description": "Bot discord dofus book",
     "main": "bot.js",
     "scripts": {
-        "test": "node bot.js"
+        "start": "nodemon app.js --- \"Démarrage de l'application\""
     },
     "author": "Gaëtan Seigneur",
     "license": "ISC",
@@ -19,5 +19,9 @@
         "mongoose": "^5.11.14",
         "pm2": "^4.5.2",
         "ytdl-core": "^4.4.5"
+    },
+    "devDependencies": {
+        "livereload": "^0.9.1",
+        "nodemon": "^2.0.6"
     }
 }
