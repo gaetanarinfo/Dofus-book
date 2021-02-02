@@ -9,12 +9,12 @@ module.exports = msg => {
     let args = msg.content.substring(config.prefix.length).split(" ");
 
     if (args[0] != "help" && args[0] != "almanax" && args[0] != "actus" && args[0] != "classe" && args[0] != "metier") {
-        msg.channel
-            .send("🥺 Désoler la commande n'est pas bonne 🥺" + '\n ----------------- \n' + 'Regardes-en dessous pour trouver ton bonheur :')
-            .catch(err => console.log(err));
+        msg.author.createDM().then(channel => {
+        channel
+            .send("🥺 Désoler la commande n'est pas bonne 🥺" + '\n ----------------- \n' + 'Regardes-en dessous pour trouver ton bonheur'
         msg.channel
             .send({ embed: require('../messages/help').embed })
-            .catch(err => console.log(err));
+        });
     }
 
     switch (args[0]) {
