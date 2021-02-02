@@ -130,18 +130,9 @@ module.exports = msg => {
 
                 break;
 }
-                default:
-                if (args[0] != "help" && args[0] != "almanax" && args[0] != "actus" && args[0] != "classe" && args[0] != "metier") {
-        msg.author.createDM().then(channel => {
-        
-            .send("🥺 Désoler la commande n'est pas bonne 🥺" + '\n ----------------- \n' + 'Regardes-en dessous pour trouver ton bonheur')
-        
-            .send({ embed: require('../messages/help').embed })
-        });
-    }
-break;
-         
-
+                
+  
+      
 
 
     }
