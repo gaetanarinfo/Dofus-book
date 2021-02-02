@@ -12,7 +12,7 @@ module.exports = msg => {
         msg.author.createDM().then(channel => {
         channel
             .send("🥺 Désoler la commande n'est pas bonne 🥺" + '\n ----------------- \n' + 'Regardes-en dessous pour trouver ton bonheur'
-        msg.channel
+        channel
             .send({ embed: require('../messages/help').embed })
         });
     }
