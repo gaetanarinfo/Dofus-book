@@ -92,48 +92,77 @@ module.exports = msg => {
 
             if (args[1] == undefined) {
                 msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/professions.json'),
+                        data = JSON.parse(files),
+                        listArr
 
-                    getJSON('https://fr.dofus.dofapi.fr/professions', function(err, res) {
+                    msg.channel
+                        .send(' | Résultat trouvé : ' + data.length + ' | ');
 
+                    data.forEach(r => {
                         msg.channel
-                            .send(' | Résultat trouvé : ' + res.length + ' | ');
-
-                        res.forEach(r => {
-                            msg.channel
-                                .send(' | ' + r.name + ' | ');
-                        })
-
+                            .send('Métier : ' + r.name);
                     })
 
-                })
+                });
                 break;
             } else {
+                let files2 = fs.readFileSync('./json/professions.json'),
+                    data2 = JSON.parse(files2)
 
-                getJSON('https://fr.dofus.dofapi.fr/professions', function(err, res) {
-
-                    res.forEach(r => {
-                        if (r.name == args[1]) {
-                            msg.channel
-                                .send(new Discord.MessageEmbed()
-                                    .setColor('#9B47DC')
-                                    .setTitle(r.name)
-                                    .setURL(r.url)
-                                    .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                                    .setDescription(r.description)
-                                    .setThumbnail(r.imgUrl)
-                                    .setImage(r.imgUrl))
-                                .catch(err => console.log(err));
-                        }
-                    })
-
+                data2.forEach(r => {
+                    if (r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#C32F3F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .setThumbnail(r.imgUrl)
+                                .setImage(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
                 })
-
                 break;
-}
-                
-  
-      
+            }
 
+        case 'pets':
 
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/pets.json'),
+                        data = JSON.parse(files)
+
+                    msg.channel
+                        .send(' | Résultat trouvé : ' + data.length + ' | ');
+
+                    data.forEach(r => {
+                        msg.channel
+                            .send(' | ' + r.title + ' - Personnage : ' + r.order + ' | ');
+                    })
+                });
+                break;
+            } else {
+                let files2 = fs.readFileSync('./json/pets.json'),
+                    data2 = JSON.parse(files2)
+
+                data2.forEach(r => {
+                    if (r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#21B246')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl)
+                                .setImage(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
     }
 }
