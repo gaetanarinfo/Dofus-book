@@ -1,9 +1,8 @@
 const config = require('../config.json'),
     Discord = require('discord.js'),
-    discord = new Discord.Client(),
     Article = require('../api/database/model/Article'),
     fs = require('fs'),
-    getJSON = require('get-json')
+    equips = require('./equips')
 
 module.exports = msg => {
     let args = msg.content.substring(config.prefix.length).split(" ");
@@ -191,25 +190,14 @@ module.exports = msg => {
             if (args[1] == undefined) {
                 msg.author.createDM().then(channel => {
                     let files = fs.readFileSync('./json/equipments.json'),
-                        data = JSON.parse(files),
-                        listArr = []
+                        data = JSON.parse(files)
 
-                    data.forEach(r => {
-
-                        const datas = r.name
-
-                        listArr.push(datas)
-
-                        return datas
-                    })
-
-                    msg.channel
-                        .send('Equipement trouvé(s) : ' + data.length);
+                    equips(msg, data)
 
                 });
                 break;
             } else {
-                let files2 = fs.readFileSync('./json/pets.json'),
+                let files2 = fs.readFileSync('./json/equipments.json'),
                     data2 = JSON.parse(files2)
 
                 data2.forEach(r => {
