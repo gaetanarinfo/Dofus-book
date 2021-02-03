@@ -52,19 +52,26 @@ module.exports = msg => {
                     })
             });
             break;
-        case 'classe':
+        case 'classes':
             if (args[1] == undefined) {
                 msg.author.createDM().then(channel => {
                     let files = fs.readFileSync('./json/classes.json'),
-                        data = JSON.parse(files)
-
-                    msg.channel
-                        .send(' | Résultat trouvé : ' + data.length + ' | ');
+                        data = JSON.parse(files),
+                        listArr = []
 
                     data.forEach(r => {
-                        msg.channel
-                            .send(' | ' + r.title + ' - Personnage : ' + r.order + ' | ');
+
+                        const datas = r.order
+
+                        listArr.push(datas)
                     })
+
+                    msg.channel
+                        .send('Personnage trouvé(s) : ' + data.length);
+
+                    msg.channel
+                        .send(listArr.join(', '));
+
                 });
                 break;
             } else {
@@ -88,21 +95,28 @@ module.exports = msg => {
                 })
                 break;
             }
-        case 'metier':
+        case 'metiers':
 
             if (args[1] == undefined) {
                 msg.author.createDM().then(channel => {
                     let files = fs.readFileSync('./json/professions.json'),
                         data = JSON.parse(files),
-                        listArr
-
-                    msg.channel
-                        .send(' | Résultat trouvé : ' + data.length + ' | ');
+                        listArr = []
 
                     data.forEach(r => {
-                        msg.channel
-                            .send('Métier : ' + r.name);
+
+                        const datas = r.name
+
+                        listArr.push(datas)
+
+                        return datas
                     })
+
+                    msg.channel
+                        .send('Métier trouvé(s) : ' + data.length);
+
+                    msg.channel
+                        .send(listArr.join(', '));
 
                 });
                 break;
@@ -119,8 +133,7 @@ module.exports = msg => {
                                 .setURL(r.url)
                                 .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
                                 .setDescription(r.description)
-                                .setThumbnail(r.imgUrl)
-                                .setImage(r.imgUrl))
+                                .setThumbnail(r.imgUrl))
                             .catch(err => console.log(err));
                     }
                 })
@@ -132,15 +145,24 @@ module.exports = msg => {
             if (args[1] == undefined) {
                 msg.author.createDM().then(channel => {
                     let files = fs.readFileSync('./json/pets.json'),
-                        data = JSON.parse(files)
-
-                    msg.channel
-                        .send(' | Résultat trouvé : ' + data.length + ' | ');
+                        data = JSON.parse(files),
+                        listArr = []
 
                     data.forEach(r => {
-                        msg.channel
-                            .send(' | ' + r.title + ' - Personnage : ' + r.order + ' | ');
+
+                        const datas = r.name
+
+                        listArr.push(datas)
+
+                        return datas
                     })
+
+                    msg.channel
+                        .send('Familier trouvé(s) : ' + data.length);
+
+                    msg.channel
+                        .send(listArr.join(', '));
+
                 });
                 break;
             } else {
@@ -157,12 +179,212 @@ module.exports = msg => {
                                 .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
                                 .setDescription(r.description)
                                 .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
-                                .setThumbnail(r.imgUrl)
-                                .setImage(r.imgUrl))
+                                .setThumbnail(r.imgUrl))
                             .catch(err => console.log(err));
                     }
                 })
                 break;
             }
+
+        case 'equips':
+
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/equipments.json'),
+                        data = JSON.parse(files),
+                        listArr = []
+
+                    data.forEach(r => {
+
+                        const datas = r.name
+
+                        listArr.push(datas)
+
+                        return datas
+                    })
+
+                    msg.channel
+                        .send('Equipement trouvé(s) : ' + data.length);
+
+                });
+                break;
+            } else {
+                let files2 = fs.readFileSync('./json/pets.json'),
+                    data2 = JSON.parse(files2)
+
+                data2.forEach(r => {
+                    if (r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
+
+        case 'havens':
+
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/havenbags.json'),
+                        data = JSON.parse(files),
+                        listArr = []
+
+                    data.forEach(r => {
+
+                        const datas = r.name
+
+                        listArr.push(datas)
+
+                        return datas
+                    })
+
+                    msg.channel
+                        .send('Havenbag trouvé(s) : ' + 'Havres-sacs ' + data.length);
+
+                    msg.channel
+                        .send(listArr.join(', '));
+
+                });
+                break;
+            } else {
+                let files2 = fs.readFileSync('./json/havenbags.json'),
+                    data2 = JSON.parse(files2)
+
+                data2.forEach(r => {
+                    if (r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#6283D0')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Les Havres-Sacs arrivent enfin sur DOFUS avec la version 2.32, vous permettant de personnaliser l'intérieur d'une maison tout en vous offrant un espace de stockage supplémentaire. \n Ces «maisons» sont partagées entre tous les personnages sur le même compte et sur le même serveur (comme une banque). \n Les Havres-Sacs sont disponibles pour chaque compte, mais certaines fonctionnalités seront réservées aux comptes d'abonnement uniquement.")
+                                .setThumbnail(r.imgUrl)
+                                .setImage('https://static.ankama.com/comm/news/ankama/www/11_2015/ng-havre-sac.jpg'))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
+
+        case 'idols':
+
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/idols.json'),
+                        data = JSON.parse(files),
+                        listArr = []
+
+                    data.forEach(r => {
+
+                        const datas = r.name
+
+                        listArr.push(datas)
+
+                        return datas
+                    })
+
+                    msg.channel
+                        .send('Idols trouvé(s) : ' + data.length);
+
+                    msg.channel
+                        .send(listArr.join(', '));
+
+                });
+                break;
+            } else {
+                let files2 = fs.readFileSync('./json/idols.json'),
+                    data2 = JSON.parse(files2)
+
+                data2.forEach(r => {
+                    if (r.name == args[1]) {
+
+                        const valueArray = JSON.stringify(r.statistics),
+                            tab = []
+
+                        tab.push(valueArray)
+
+                        const reqArr = JSON.parse(valueArray),
+                            resArr = [],
+                            resArr2 = []
+
+                        reqArr.forEach(r => {
+                            resArr.push(r.name)
+                        })
+
+                        reqArr.forEach(r => {
+                            resArr2.push(r.power)
+                        })
+
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Bonus', value: resArr.slice(-1).join(', '), inline: true }, { name: 'Puissance', value: resArr2.slice(-1).join(', '), inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
+
+            // case 'consum1':
+
+            //     if (args[1] == undefined) {
+            //         msg.author.createDM().then(channel => {
+            //             let files = fs.readFileSync('./json/consumables.json'),
+            //                 data = JSON.parse(files),
+            //                 listArr = []
+
+            //             data.slice(-80).forEach(data => {
+
+            //                 const datas = data.name
+
+            //                 listArr.push(datas)
+            //             })
+
+            //             console.log(listArr);
+
+
+            //             msg.channel
+            //                 .send('Consumable trouvé(s) : ' + data.length);
+
+            //             msg.channel
+            //                 .send(listArr.join(', '));
+
+            //         });
+            //         break;
+            //     } else {
+            //         let files2 = fs.readFileSync('./json/consumables.json'),
+            //             data2 = JSON.parse(files2)
+
+            //         data2.forEach(r => {
+            //             if (r.name == args[1]) {
+            //                 msg.channel
+            //                     .send(new Discord.MessageEmbed()
+            //                         .setColor('#F7ED1F')
+            //                         .setTitle(r.name)
+            //                         .setURL(r.url)
+            //                         .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+            //                         .setDescription(r.description)
+            //                         .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+            //                         .setThumbnail(r.imgUrl)
+            //                         .setImage(r.imgUrl))
+            //                     .catch(err => console.log(err));
+            //             }
+            //         })
+            //         break;
+            //     }
     }
 }

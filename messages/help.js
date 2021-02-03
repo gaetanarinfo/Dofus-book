@@ -13,11 +13,23 @@ module.exports = {
             name: '\`🤎 !actus\`',
             value: "Permet de voir les dernières actualités !"
         }, {
-            name: '\`🖤 !classe\`',
-            value: "Permet de voir la liste des classes des perssonages du jeux par liste !"
+            name: '\`🖤 !classes\`',
+            value: "Permet de voir la liste des classes disponible !"
         }, {
-            name: '\`💗 !classe nomdupersonnage\`',
+            name: '\`💗 !classes nomdupersonnage\`',
             value: "Permet de voir la classe du personnage !"
+        }, {
+            name: '\`💚 !metiers\`',
+            value: "Permet de voir les metiers disponible !"
+        }, {
+            name: '\`🧡 !metiers nomdumetier\`',
+            value: "Permet de voir un metier !"
+        }, {
+            name: '\`💙 !havens\`',
+            value: "Permet de voir les havenbags disponible !"
+        }, {
+            name: '\`💝 !havens nomduhavenbags\`',
+            value: "Permet de voir les havenbags disponible !"
         })
         .setImage('https://static.ankama.com/ankama/cms/images/273/2020/01/03/1083711.w500h.jpg')
         .setTimestamp()
