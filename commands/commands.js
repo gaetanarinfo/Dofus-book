@@ -214,6 +214,50 @@ module.exports = msg => {
                                 .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
                                 .setThumbnail(r.imgUrl))
                             .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
                     }
                 })
                 break;
@@ -272,6 +316,28 @@ module.exports = msg => {
                                 .setImage('https://static.ankama.com/comm/news/ankama/www/11_2015/ng-havre-sac.jpg'))
                             .catch(err => console.log(err));
                     } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#6283D0')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Les Havres-Sacs arrivent enfin sur DOFUS avec la version 2.32, vous permettant de personnaliser l'intérieur d'une maison tout en vous offrant un espace de stockage supplémentaire. \n Ces «maisons» sont partagées entre tous les personnages sur le même compte et sur le même serveur (comme une banque). \n Les Havres-Sacs sont disponibles pour chaque compte, mais certaines fonctionnalités seront réservées aux comptes d'abonnement uniquement.")
+                                .setThumbnail(r.imgUrl)
+                                .setImage('https://static.ankama.com/comm/news/ankama/www/11_2015/ng-havre-sac.jpg'))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#6283D0')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Les Havres-Sacs arrivent enfin sur DOFUS avec la version 2.32, vous permettant de personnaliser l'intérieur d'une maison tout en vous offrant un espace de stockage supplémentaire. \n Ces «maisons» sont partagées entre tous les personnages sur le même compte et sur le même serveur (comme une banque). \n Les Havres-Sacs sont disponibles pour chaque compte, mais certaines fonctionnalités seront réservées aux comptes d'abonnement uniquement.")
+                                .setThumbnail(r.imgUrl)
+                                .setImage('https://static.ankama.com/comm/news/ankama/www/11_2015/ng-havre-sac.jpg'))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
                         msg.channel
                             .send(new Discord.MessageEmbed()
                                 .setColor('#6283D0')
@@ -369,6 +435,54 @@ module.exports = msg => {
 
                 data2.forEach(r => {
                     if (r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl)
+                                .setImage(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl)
+                                .setImage(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl)
+                                .setImage(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl)
+                                .setImage(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
                         msg.channel
                             .send(new Discord.MessageEmbed()
                                 .setColor('#F7ED1F')
