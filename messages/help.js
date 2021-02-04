@@ -29,7 +29,13 @@ module.exports = {
             value: "Permet de voir les havenbags disponible !"
         }, {
             name: '\`💝 !havens nomduhavenbags\`',
-            value: "Permet de voir les havenbags disponible !"
+            value: "Permet de voir l'havenbag !"
+        }, {
+            name: '\`🤍 !consums\`',
+            value: "Permet de voir les consumables disponible !"
+        }, {
+            name: '\`💨 !consums nomduconsumable\`',
+            value: "Permet de voir le consumable !"
         })
         .setImage('https://static.ankama.com/ankama/cms/images/273/2020/01/03/1083711.w500h.jpg')
         .setTimestamp()

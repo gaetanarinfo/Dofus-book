@@ -2,7 +2,8 @@ const config = require('../config.json'),
     Discord = require('discord.js'),
     Article = require('../api/database/model/Article'),
     fs = require('fs'),
-    equips = require('./equips')
+    equips = require('./equips'),
+    consums = require('./consums')
 
 module.exports = msg => {
     let args = msg.content.substring(config.prefix.length).split(" ");
@@ -192,6 +193,7 @@ module.exports = msg => {
                     let files = fs.readFileSync('./json/equipments.json'),
                         data = JSON.parse(files)
 
+                    // Function qui récupere les datas
                     equips(msg, data)
 
                 });
@@ -247,7 +249,29 @@ module.exports = msg => {
                     data2 = JSON.parse(files2)
 
                 data2.forEach(r => {
-                    if (r.name == args[1]) {
+                    if (r.name == args[1] || r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#6283D0')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Les Havres-Sacs arrivent enfin sur DOFUS avec la version 2.32, vous permettant de personnaliser l'intérieur d'une maison tout en vous offrant un espace de stockage supplémentaire. \n Ces «maisons» sont partagées entre tous les personnages sur le même compte et sur le même serveur (comme une banque). \n Les Havres-Sacs sont disponibles pour chaque compte, mais certaines fonctionnalités seront réservées aux comptes d'abonnement uniquement.")
+                                .setThumbnail(r.imgUrl)
+                                .setImage('https://static.ankama.com/comm/news/ankama/www/11_2015/ng-havre-sac.jpg'))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#6283D0')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Les Havres-Sacs arrivent enfin sur DOFUS avec la version 2.32, vous permettant de personnaliser l'intérieur d'une maison tout en vous offrant un espace de stockage supplémentaire. \n Ces «maisons» sont partagées entre tous les personnages sur le même compte et sur le même serveur (comme une banque). \n Les Havres-Sacs sont disponibles pour chaque compte, mais certaines fonctionnalités seront réservées aux comptes d'abonnement uniquement.")
+                                .setThumbnail(r.imgUrl)
+                                .setImage('https://static.ankama.com/comm/news/ankama/www/11_2015/ng-havre-sac.jpg'))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
                         msg.channel
                             .send(new Discord.MessageEmbed()
                                 .setColor('#6283D0')
@@ -327,52 +351,38 @@ module.exports = msg => {
                 break;
             }
 
-            // case 'consum1':
+        case 'consums':
 
-            //     if (args[1] == undefined) {
-            //         msg.author.createDM().then(channel => {
-            //             let files = fs.readFileSync('./json/consumables.json'),
-            //                 data = JSON.parse(files),
-            //                 listArr = []
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/consumables.json'),
+                        data = JSON.parse(files)
 
-            //             data.slice(-80).forEach(data => {
+                    // Function qui récupere les datas
+                    consums(msg, data)
 
-            //                 const datas = data.name
+                });
+                break;
+            } else {
+                let files2 = fs.readFileSync('./json/consumables.json'),
+                    data2 = JSON.parse(files2)
 
-            //                 listArr.push(datas)
-            //             })
-
-            //             console.log(listArr);
-
-
-            //             msg.channel
-            //                 .send('Consumable trouvé(s) : ' + data.length);
-
-            //             msg.channel
-            //                 .send(listArr.join(', '));
-
-            //         });
-            //         break;
-            //     } else {
-            //         let files2 = fs.readFileSync('./json/consumables.json'),
-            //             data2 = JSON.parse(files2)
-
-            //         data2.forEach(r => {
-            //             if (r.name == args[1]) {
-            //                 msg.channel
-            //                     .send(new Discord.MessageEmbed()
-            //                         .setColor('#F7ED1F')
-            //                         .setTitle(r.name)
-            //                         .setURL(r.url)
-            //                         .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-            //                         .setDescription(r.description)
-            //                         .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
-            //                         .setThumbnail(r.imgUrl)
-            //                         .setImage(r.imgUrl))
-            //                     .catch(err => console.log(err));
-            //             }
-            //         })
-            //         break;
-            //     }
+                data2.forEach(r => {
+                    if (r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#F7ED1F')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true })
+                                .setThumbnail(r.imgUrl)
+                                .setImage(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
     }
 }
