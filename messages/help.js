@@ -36,6 +36,12 @@ module.exports = {
         }, {
             name: '\`💨 !consums nomduconsumable\`',
             value: "Permet de voir le consumable !"
+        }, {
+            name: '\`🍀 !weapons\`',
+            value: "Permet de voir les weapons disponible !"
+        }, {
+            name: '\`🍁 !weapons nomduweapons\`',
+            value: "Permet de voir le weapons !"
         })
         .setImage('https://static.ankama.com/ankama/cms/images/273/2020/01/03/1083711.w500h.jpg')
         .setTimestamp()

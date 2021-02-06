@@ -11,7 +11,7 @@ module.exports = function(msg, data) {
         listArr9 = []
 
     msg.channel
-        .send('Equipement trouvé(s) : ' + data.length);
+        .send('Arme trouvé(s) : ' + data.length);
 
     data.slice(0, 90).forEach(data => {
 

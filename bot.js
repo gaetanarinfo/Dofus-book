@@ -21,22 +21,6 @@ discord.on('message', msg => {
 
 })
 
-// A décommenter en prod
-// discord.on("ready", () => {
-//     const msgWel = discord.channels.cache.get("805067889336909855");
-//     msgWel.send("🌞 Coucou ! Si tu ne le sais pas fait donc !help en mp pour me découvrir... 🌞").catch(e => console.log(e));
-
-//     const msgAlma = discord.channels.cache.get("805067889336909855");
-//     msgAlma.send("🌈 Un nouvel Almanax est disponible ! Viens le découvrir !almanax mp moi... 🌈").catch(e => console.log(e));
-
-//     const msgActus = discord.channels.cache.get("805067889336909855");
-//     msgActus.send("🌵 Regarde dès maintenant les actus dofus pour ne rien manquer ! !actus mp moi... 🌵").catch(e => console.log(e));
-
-//     const msgClasse = discord.channels.cache.get("805067889336909855");
-//     msgActus.send("👻 Tu peux voir la liste des personnages en tapant !classe mp moi... 👻").catch(e => console.log(e));
-
-// });
-
 discord.login(config.BOT_TOKEN);
 
 discord.on('ready', () => {

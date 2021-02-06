@@ -4,7 +4,8 @@ const config = require('../config.json'),
     fs = require('fs'),
     equips = require('./equips'),
     consums = require('./consums'),
-    weapons = require('./weapons')
+    weapons = require('./weapons'),
+    mounts = require('./mounts')
 
 module.exports = msg => {
     let args = msg.content.substring(config.prefix.length).split(" ");
@@ -386,21 +387,21 @@ module.exports = msg => {
                 data2.forEach(r => {
 
                     const valueArray = JSON.stringify(r.statistics),
-                    tab = []
+                        tab = []
 
-                tab.push(valueArray)
+                    tab.push(valueArray)
 
-                const reqArr = JSON.parse(valueArray),
-                    resArr = [],
-                    resArr2 = []
+                    const reqArr = JSON.parse(valueArray),
+                        resArr = [],
+                        resArr2 = []
 
-                reqArr.forEach(r => {
-                    resArr.push(r.name)
-                })
+                    reqArr.forEach(r => {
+                        resArr.push(r.name)
+                    })
 
-                reqArr.forEach(r => {
-                    resArr2.push(r.power)
-                })
+                    reqArr.forEach(r => {
+                        resArr2.push(r.power)
+                    })
 
 
                     if (r.name == args[1]) {
@@ -415,8 +416,8 @@ module.exports = msg => {
                                 .addFields({ name: 'Bonus', value: resArr.slice(-1).join(', '), inline: true }, { name: 'Puissance', value: resArr2.slice(-1).join(', '), inline: true })
                                 .setThumbnail(r.imgUrl))
                             .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2]) {
-                            msg.channel
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
                             .setColor('#9F61AE')
                             .setTitle(r.name)
                             .setURL(r.url)
@@ -424,9 +425,9 @@ module.exports = msg => {
                             .setDescription(r.description)
                             .addFields({ name: 'Bonus', value: resArr.slice(-1).join(', '), inline: true }, { name: 'Puissance', value: resArr2.slice(-1).join(', '), inline: true })
                             .setThumbnail(r.imgUrl)
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
-                            msg.channel
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
                             .setColor('#9F61AE')
                             .setTitle(r.name)
                             .setURL(r.url)
@@ -434,9 +435,9 @@ module.exports = msg => {
                             .setDescription(r.description)
                             .addFields({ name: 'Bonus', value: resArr.slice(-1).join(', '), inline: true }, { name: 'Puissance', value: resArr2.slice(-1).join(', '), inline: true })
                             .setThumbnail(r.imgUrl)
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
-                            msg.channel
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
                             .setColor('#9F61AE')
                             .setTitle(r.name)
                             .setURL(r.url)
@@ -444,9 +445,9 @@ module.exports = msg => {
                             .setDescription(r.description)
                             .addFields({ name: 'Bonus', value: resArr.slice(-1).join(', '), inline: true }, { name: 'Puissance', value: resArr2.slice(-1).join(', '), inline: true })
                             .setThumbnail(r.imgUrl)
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
-                            msg.channel
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
+                        msg.channel
                             .setColor('#9F61AE')
                             .setTitle(r.name)
                             .setURL(r.url)
@@ -454,8 +455,8 @@ module.exports = msg => {
                             .setDescription(r.description)
                             .addFields({ name: 'Bonus', value: resArr.slice(-1).join(', '), inline: true }, { name: 'Puissance', value: resArr2.slice(-1).join(', '), inline: true })
                             .setThumbnail(r.imgUrl)
-                                .catch(err => console.log(err));
-                        }
+                            .catch(err => console.log(err));
+                    }
                 })
                 break;
             }
@@ -562,26 +563,26 @@ module.exports = msg => {
                 data.forEach(r => {
 
                     const valueArray = JSON.stringify(r.characteristics),
-                    tab = []
+                        tab = []
 
-                tab.push(valueArray)
+                    tab.push(valueArray)
 
-                const reqArr = JSON.parse(valueArray),
-                    resArr = [],
-                    resArr2 = [],
-                    resArr3 = []
+                    const reqArr = JSON.parse(valueArray),
+                        resArr = [],
+                        resArr2 = [],
+                        resArr3 = []
 
-                reqArr.forEach(r => {
-                    resArr.push(r.PA)
-                })
+                    reqArr.forEach(r => {
+                        resArr.push(r.PA)
+                    })
 
-                reqArr.forEach(r => {
-                    resArr2.push(r.Portée)
-                })
+                    reqArr.forEach(r => {
+                        resArr2.push(r.Portée)
+                    })
 
-                reqArr.forEach(r => {
-                    resArr3.push(r.CC)
-                })
+                    reqArr.forEach(r => {
+                        resArr3.push(r.CC)
+                    })
 
                     if (r.name == args[1]) {
 
@@ -595,9 +596,9 @@ module.exports = msg => {
                                 .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
                                 .setThumbnail(r.imgUrl))
                             .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2]) {
-                            msg.channel
-                                .send(new Discord.MessageEmbed()
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
                                 .setColor('#9F61AE')
                                 .setTitle(r.name)
                                 .setURL(r.url)
@@ -605,10 +606,10 @@ module.exports = msg => {
                                 .setDescription(r.description)
                                 .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
                                 .setThumbnail(r.imgUrl))
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
-                            msg.channel
-                                .send(new Discord.MessageEmbed()
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
                                 .setColor('#9F61AE')
                                 .setTitle(r.name)
                                 .setURL(r.url)
@@ -616,10 +617,10 @@ module.exports = msg => {
                                 .setDescription(r.description)
                                 .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
                                 .setThumbnail(r.imgUrl))
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
-                            msg.channel
-                                .send(new Discord.MessageEmbed()
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
                                 .setColor('#9F61AE')
                                 .setTitle(r.name)
                                 .setURL(r.url)
@@ -627,10 +628,10 @@ module.exports = msg => {
                                 .setDescription(r.description)
                                 .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
                                 .setThumbnail(r.imgUrl))
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
-                            msg.channel
-                                .send(new Discord.MessageEmbed()
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
                                 .setColor('#9F61AE')
                                 .setTitle(r.name)
                                 .setURL(r.url)
@@ -638,8 +639,87 @@ module.exports = msg => {
                                 .setDescription(r.description)
                                 .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
                                 .setThumbnail(r.imgUrl))
-                                .catch(err => console.log(err));
-                        }
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
+
+        case 'mounts':
+
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/mounts.json'),
+                        data = JSON.parse(files)
+
+                    // Function qui récupere les datas
+                    mounts(msg, data)
+
+                });
+                break;
+            } else {
+                let files2 = fs.readFileSync('./json/mounts.json'),
+                    data2 = JSON.parse(files2)
+
+                data2.forEach(r => {
+
+                    if (r.name == args[1]) {
+
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Dans Dofus il existe trois types de montures : les dragodindes, les muldos et les volkornes.")
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Dans Dofus il existe trois types de montures : les dragodindes, les muldos et les volkornes.")
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Dans Dofus il existe trois types de montures : les dragodindes, les muldos et les volkornes.")
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Dans Dofus il existe trois types de montures : les dragodindes, les muldos et les volkornes.")
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Dans Dofus il existe trois types de montures : les dragodindes, les muldos et les volkornes.")
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
                 })
                 break;
             }
