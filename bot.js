@@ -26,8 +26,6 @@ discord.login(config.BOT_TOKEN);
 discord.on('ready', () => {
     console.log(`Logged in as ${discord.user.tag}!`);
 
-    almanax()
-
     let channel = discord.channels.cache.get('805735120694149180');
 
     channel.join()
