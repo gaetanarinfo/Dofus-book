@@ -21,10 +21,14 @@ module.exports = function(msg, data) {
         listArr19 = [],
         listArr20 = [],
         listArr21 = [],
-        listArr22 = []
+        listArr22 = [], 
+        listArr23 = [],
+        listArr24 = [],
+        listArr25 = [],
+        listArr26 = []
 
     msg.channel
-        .send('Consumable trouvé(s) : ' + data.length);
+        .send('Monstre trouvé(s) : ' + data.length);
 
     data.slice(0, 80).forEach(data => {
 
@@ -237,4 +241,53 @@ module.exports = function(msg, data) {
     msg.channel
         .send(listArr21.join(' | '));
 
+    data.slice(1370, 1460).forEach(data => {
+
+        const datas = data.name
+    
+        listArr22.push(datas)
+    });
+    
+    msg.channel
+        .send(listArr22.join(' | '));  
+        
+    data.slice(1461, 1560).forEach(data => {
+
+        const datas = data.name
+    
+        listArr23.push(datas)
+    });
+    
+    msg.channel
+        .send(listArr23.join(' | '));
+        
+    data.slice(1561, 1660).forEach(data => {
+
+        const datas = data.name
+    
+        listArr24.push(datas)
+    });
+    
+    msg.channel
+        .send(listArr24.join(' | '));  
+        
+    data.slice(1661, 1760).forEach(data => {
+
+        const datas = data.name
+    
+        listArr25.push(datas)
+    });
+    
+    msg.channel
+        .send(listArr25.join(' | '));  
+
+    data.slice(1761, 1818).forEach(data => {
+
+        const datas = data.name
+    
+        listArr26.push(datas)
+    });
+    
+    msg.channel
+        .send(listArr26.join(' | '));  
 }

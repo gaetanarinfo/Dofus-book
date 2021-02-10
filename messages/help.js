@@ -38,10 +38,16 @@ module.exports = {
             value: "Permet de voir le consumable !"
         }, {
             name: '\`🍀 !weapons\`',
-            value: "Permet de voir les weapons disponible !"
+            value: "Permet de voir les armes disponible !"
         }, {
-            name: '\`🍁 !weapons nomduweapons\`',
-            value: "Permet de voir le weapons !"
+            name: '\`🍁 !weapons nomdel\'arme\`',
+            value: "Permet de voir l'arme !"
+        }, {
+            name: '\`🐟 !monsters\`',
+            value: "Permet de voir les monstres disponible !"
+        }, {
+            name: '\`🐳 !monsters nomdumonstres\`',
+            value: "Permet de voir le monstre !"
         })
         .setImage('https://static.ankama.com/ankama/cms/images/273/2020/01/03/1083711.w500h.jpg')
         .setTimestamp()
