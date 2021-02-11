@@ -600,37 +600,37 @@ module.exports = msg => {
                             .catch(err => console.log(err));
                     } else if (r.name == args[1] + ' ' + args[2]) {
                         msg.channel
-                        .send(new Discord.MessageEmbed()
-                        .setColor('#9F61AE')
-                        .setTitle(r.name)
-                        .setURL(r.url)
-                        .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                        .setDescription(r.description)
-                        .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
-                        .setThumbnail(r.imgUrl))
-                    .catch(err => console.log(err));
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
                     } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
                         msg.channel
-                        .send(new Discord.MessageEmbed()
-                        .setColor('#9F61AE')
-                        .setTitle(r.name)
-                        .setURL(r.url)
-                        .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                        .setDescription(r.description)
-                        .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
-                        .setThumbnail(r.imgUrl))
-                    .catch(err => console.log(err));
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
                     } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
                         msg.channel
-                        .send(new Discord.MessageEmbed()
-                        .setColor('#9F61AE')
-                        .setTitle(r.name)
-                        .setURL(r.url)
-                        .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                        .setDescription(r.description)
-                        .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
-                        .setThumbnail(r.imgUrl))
-                    .catch(err => console.log(err));
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription(r.description)
+                                .addFields({ name: 'Level', value: r.level, inline: true }, { name: 'Type', value: r.type, inline: true }, { name: 'PA', value: resArr.slice(-3), inline: true, required: false }, { name: 'Portée', value: resArr2.slice(-3), inline: true, required: false }, { name: 'CC', value: resArr3.slice(-3), inline: true, required: false })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
                     } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
                         msg.channel
                             .send(new Discord.MessageEmbed()
@@ -726,162 +726,171 @@ module.exports = msg => {
                 break;
             }
 
-            case 'monsters':
+        case 'monsters':
 
-                if (args[1] == undefined) {
-                    msg.author.createDM().then(channel => {
-                        let files = fs.readFileSync('./json/monsters.json'),
-                            data = JSON.parse(files)
-    
-                        // Function qui récupere les datas
-                        monsters(msg, data)
-    
-                    });
-                    break;
-                } else {
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/monsters.json'),
+                        data = JSON.parse(files)
 
-                    let files2 = fs.readFileSync('./json/monsters.json'),
+                    // Function qui récupere les datas
+                    monsters(msg, data)
+
+                });
+                break;
+            } else {
+
+                let files2 = fs.readFileSync('./json/monsters.json'),
                     data2 = JSON.parse(files2)
 
-                    data2.forEach(r => {
+                data2.forEach(r => {
 
-                        const valueArray = JSON.stringify(r.statistics),
-                            tab = []
+                    const valueArray = JSON.stringify(r.statistics),
+                        tab = []
 
-                        tab.push(valueArray)
+                    tab.push(valueArray)
 
-                        const reqArr = JSON.parse(valueArray),
-                            resArr = [],
-                            resArr2 = [],
-                            resArr3 = []
+                    const reqArr = JSON.parse(valueArray),
+                        resArr = [],
+                        resArr2 = [],
+                        resArr3 = []
 
-                        reqArr.forEach(r => {
-                            resArr.push(r.PV)
-                        })
-
-                        const PVmin = resArr.slice(0, 1)
-
-                        JSON.stringify(PVmin)
-
-                        reqArr.forEach(r => {
-                            resArr2.push(r.PM)
-                        })
-
-                        const PMmin = resArr2.slice(2, 3)
-
-                        JSON.stringify(PMmin)
-
-                        reqArr.forEach(r => {
-                            resArr3.push(r.PA)
-                        })
-
-                        const PAmin = resArr3.slice(1, 2)
-
-                        JSON.stringify(PAmin)
-
-                        const valueArray2 = JSON.stringify(r.resistances),
-                            tab2 = []
-
-                        tab2.push(valueArray2)
-
-                        const reqArr2 = JSON.parse(valueArray2),
-                            resArr4 = [],
-                            resArr5 = [],
-                            resArr6 = [],
-                            resArr7 = []
-
-                        reqArr2.forEach(r => {
-                            resArr4.push(r.Terre)
-                        })
-
-                        const TERREmin = resArr4.slice(0, 1)
-
-                        JSON.stringify(TERREmin)
-
-                        reqArr2.forEach(r => {
-                            resArr5.push(r.Air)
-                        })
-
-                        const AIRmin = resArr5.slice(1, 2)
-
-                        JSON.stringify(AIRmin)
-
-                        reqArr2.forEach(r => {
-                            resArr6.push(r.Feu)
-                        })
-
-                        const FEUmin = resArr6.slice(2, 3)
-
-                        JSON.stringify(PAmin)
-
-                        reqArr2.forEach(r => {
-                            resArr7.push(r.Neutre)
-                        })
-
-                        const NEUTREmin = resArr7.slice(4, 5)
-
-                        JSON.stringify(NEUTREmin)
-    
-                        if (r.name == args[1]) {
-    
-                            msg.channel
-                                .send(new Discord.MessageEmbed()
-                                    .setColor('#9F61AE')
-                                    .setTitle(r.name)
-                                    .setURL(r.url)
-                                    .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                                    .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
-                                    .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false } )
-                                    .setThumbnail(r.imgUrl))
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2]) {
-                            msg.channel
-                                .send(new Discord.MessageEmbed()
-                                    .setColor('#9F61AE')
-                                    .setTitle(r.name)
-                                    .setURL(r.url)
-                                    .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                                    .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
-                                    .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false })
-                                    .setThumbnail(r.imgUrl))
-                                .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
-                            msg.channel
-                            .send(new Discord.MessageEmbed()
-                            .setColor('#9F61AE')
-                            .setTitle(r.name)
-                            .setURL(r.url)
-                            .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                            .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
-                            .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false } )
-                            .setThumbnail(r.imgUrl))
-                        .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
-                            msg.channel
-                            .send(new Discord.MessageEmbed()
-                            .setColor('#9F61AE')
-                            .setTitle(r.name)
-                            .setURL(r.url)
-                            .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                            .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
-                            .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false } )
-                            .setThumbnail(r.imgUrl))
-                        .catch(err => console.log(err));
-                        } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
-                            msg.channel
-                            .send(new Discord.MessageEmbed()
-                            .setColor('#9F61AE')
-                            .setTitle(r.name)
-                            .setURL(r.url)
-                            .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
-                            .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
-                            .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false } )
-                            .setThumbnail(r.imgUrl))
-                        .catch(err => console.log(err));
-                        }
+                    reqArr.forEach(r => {
+                        resArr.push(r.PV)
                     })
-                    break;
-                }
-            }   
+
+                    const PVmin = resArr.slice(0, 1)
+
+                    JSON.stringify(PVmin)
+
+                    reqArr.forEach(r => {
+                        resArr2.push(r.PM)
+                    })
+
+                    const PMmin = resArr2.slice(2, 3)
+
+                    JSON.stringify(PMmin)
+
+                    reqArr.forEach(r => {
+                        resArr3.push(r.PA)
+                    })
+
+                    const PAmin = resArr3.slice(1, 2)
+
+                    JSON.stringify(PAmin)
+
+                    const valueArray2 = JSON.stringify(r.resistances),
+                        tab2 = []
+
+                    tab2.push(valueArray2)
+
+                    const reqArr2 = JSON.parse(valueArray2),
+                        resArr4 = [],
+                        resArr5 = [],
+                        resArr6 = [],
+                        resArr7 = []
+
+                    reqArr2.forEach(r => {
+                        resArr4.push(r.Terre)
+                    })
+
+                    const TERREmin = resArr4.slice(0, 1)
+
+                    JSON.stringify(TERREmin)
+
+                    reqArr2.forEach(r => {
+                        resArr5.push(r.Air)
+                    })
+
+                    const AIRmin = resArr5.slice(1, 2)
+
+                    JSON.stringify(AIRmin)
+
+                    reqArr2.forEach(r => {
+                        resArr6.push(r.Feu)
+                    })
+
+                    const FEUmin = resArr6.slice(2, 3)
+
+                    JSON.stringify(PAmin)
+
+                    reqArr2.forEach(r => {
+                        resArr7.push(r.Neutre)
+                    })
+
+                    const NEUTREmin = resArr7.slice(4, 5)
+
+                    JSON.stringify(NEUTREmin)
+
+                    const valueArray3 = JSON.stringify(r.areas),
+                        tab3 = [];
+
+                    tab3.push(valueArray3)
+
+                    JSON.stringify(tab3)
+
+                    const resAREAS = tab3.join(' , ').replace(/[[\]]/g, '')
+
+                    if (r.name == args[1]) {
+
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false }, { name: 'Zones', value: resAREAS })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false }, { name: 'Zones', value: resAREAS })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false }, { name: 'Zones', value: resAREAS })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false }, { name: 'Zones', value: resAREAS })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false }, { name: 'Zones', value: resAREAS })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
+    }
 
 }
