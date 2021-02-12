@@ -7,7 +7,8 @@ const config = require('../config.json'),
     consums = require('./consums'),
     weapons = require('./weapons'),
     mounts = require('./mounts'),
-    monsters = require('./monsters')
+    monsters = require('./monsters'),
+    sets = require('./sets')
 
 module.exports = msg => {
     let args = msg.content.substring(config.prefix.length).split(" ");
@@ -885,6 +886,45 @@ module.exports = msg => {
                                 .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
                                 .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
                                 .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'PV', value: "min : " + PVmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'PM', value: "min : " + PMmin[0].min, inline: true, required: false }, { name: 'PA', value: "min : " + PAmin[0].min + " " + "max : " + PVmin[0].max, inline: true, required: false }, { name: 'Res Terre', value: "min : " + TERREmin[0].min + " " + "max : " + TERREmin[0].max, inline: true, required: false }, { name: 'Res Air', value: "min : " + AIRmin[0].min + " " + "max : " + AIRmin[0].max, inline: true, required: false }, { name: 'Res Feu', value: "min : " + FEUmin[0].min + " " + "max : " + FEUmin[0].max, inline: true, required: false }, { name: 'Res Neutre', value: "min : " + NEUTREmin[0].min + " " + "max : " + NEUTREmin[0].max, inline: true, required: false }, { name: 'Zones', value: resAREAS })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    }
+                })
+                break;
+            }
+
+        case 'sets':
+
+            if (args[1] == undefined) {
+                msg.author.createDM().then(channel => {
+                    let files = fs.readFileSync('./json/sets.json'),
+                        data = JSON.parse(files)
+
+                    // Function qui récupere les datas
+                    sets(msg, data)
+
+                });
+                break;
+            } else {
+
+                let files2 = fs.readFileSync('./json/sets.json'),
+                    data2 = JSON.parse(files2)
+
+                data2.forEach(r => {
+
+                    const valueArray = JSON.stringify(r.bonus)
+      
+                    //console.log(valueArray.slice(10, 11))
+
+                    if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true, required: false }, { name: 'Bonus', value: valueArray.slice(10, 11), inline: true, required: false })
                                 .setThumbnail(r.imgUrl))
                             .catch(err => console.log(err));
                     }
