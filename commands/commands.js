@@ -913,10 +913,52 @@ module.exports = msg => {
                 data2.forEach(r => {
 
                     const valueArray = JSON.stringify(r.bonus)
-      
-                    //console.log(valueArray.slice(10, 11))
 
-                    if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                    if (r.name == args[1]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true, required: false }, { name: 'Bonus', value: valueArray.slice(10, 11), inline: true, required: false })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true, required: false }, { name: 'Bonus', value: valueArray.slice(10, 11), inline: true, required: false })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true, required: false }, { name: 'Bonus', value: valueArray.slice(10, 11), inline: true, required: false })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4]) {
+                        msg.channel
+                            .send(new Discord.MessageEmbed()
+                                .setColor('#9F61AE')
+                                .setTitle(r.name)
+                                .setURL(r.url)
+                                .setAuthor('Dofus-Book', 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
+                                .setDescription("Monstres, archi monstres et autres bestioles : le Monde des Douze regorge de créatures menaçantes. Étudiez ... Abrakildas le Vénérable, Archi-Monstre")
+                                .addFields({ name: 'Type', value: r.type, inline: true }, { name: 'Level', value: r.level, inline: true, required: false }, { name: 'Bonus', value: valueArray.slice(10, 11), inline: true, required: false })
+                                .setThumbnail(r.imgUrl))
+                            .catch(err => console.log(err));
+                    } else if (r.name == args[1] + ' ' + args[2] + ' ' + args[3] + ' ' + args[4] + ' ' + args[5]) {
                         msg.channel
                             .send(new Discord.MessageEmbed()
                                 .setColor('#9F61AE')

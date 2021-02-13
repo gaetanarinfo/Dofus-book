@@ -48,6 +48,12 @@ module.exports = {
         }, {
             name: '\`🐳 !monsters nomdumonstres\`',
             value: "Permet de voir le monstre !"
+        }, {
+            name: '\`🔥 !sets\`',
+            value: "Permet de voir les equiments disponible !"
+        }, {
+            name: '\`🍖 !sets nomdel\'equipement\`',
+            value: "Permet de voir l'equiments !"
         })
         .setImage('https://static.ankama.com/ankama/cms/images/273/2020/01/03/1083711.w500h.jpg')
         .setTimestamp()
