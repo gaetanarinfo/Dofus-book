@@ -24,14 +24,14 @@
 * Côté Utilisateur
 
 - [x] **Commande basic**
-- [] **Inscription sur le bot**
-- [] **Connexion sur le bot**
+- [ ] **Inscription sur le bot**
+- [ ] **Connexion sur le bot**
 
 * Côté Administrateur
 
-- [] **Ajouter un membre**
-- [] **Modifier un membre**
-- [] **Supprimer un membre**
+- [ ] **Ajouter un membre**
+- [ ] **Modifier un membre**
+- [ ] **Supprimer un membre**
 
 * Liste des bugs
 
