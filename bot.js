@@ -26,7 +26,7 @@ discord.login(config.BOT_TOKEN);
 discord.on('ready', () => {
     console.log(`Logged in as ${discord.user.tag}!`);
 
-    let channel = discord.channels.cache.get('80573512069414918');
+    let channel = discord.channels.cache.get('805735120694149180');
 
     if (!channel) {
 
