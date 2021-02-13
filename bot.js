@@ -26,37 +26,64 @@ discord.login(config.BOT_TOKEN);
 discord.on('ready', () => {
     console.log(`Logged in as ${discord.user.tag}!`);
 
-    let channel = discord.channels.cache.get('805735120694149180');
+    let channel = discord.channels.cache.get('80573512069414918');
 
-    channel.join()
-        .then(connection => {
-            console.log('Rejoins le channel Audio');
+    if (!channel) {
 
-            connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
+        const getDefaultChannel = () => {
 
-        })
-        .catch(console.error);
+            const Long = require("long");
 
-    // Almanax
-    setInterval(() => {
-        almanax()
-    }, 04000000);
+            const generalChannel = discord.channels.cache.find(channel => channel.name === "Général");
 
-    setInterval((res) => {
-        discord.on('ready', () => {
+            console.log(generalChannel)
 
-            then(connection => {
-                    console.log('Rejoins le channel Audio');
+            if (generalChannel) {
+                generalChannel.join()
+                    .then(connection => {
 
-                    connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
+                        connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
 
-                })
-                .catch(console.error);
+                    })
+                    .catch(console.error);
+            }
+        }
 
-        })
+        getDefaultChannel()
 
-        console.log(res);
-    }, 3852000);
+    } else {
+
+        channel.join()
+            .then(connection => {
+                console.log('Rejoins le channel Audio');
+
+                connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
+
+            })
+            .catch(console.error);
+
+        // Almanax
+        setInterval(() => {
+            almanax()
+        }, 04000000);
+
+        setInterval((res) => {
+            discord.on('ready', () => {
+
+                then(connection => {
+                        console.log('Rejoins le channel Audio');
+
+                        connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
+
+                    })
+                    .catch(console.error);
+
+            })
+
+            console.log(res);
+        }, 3852000);
+
+    }
 
 });
 

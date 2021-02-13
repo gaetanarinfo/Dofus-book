@@ -26,7 +26,7 @@
 - [x] **Commande basic**
 - [ ] **Inscription sur le bot**
 - [ ] **Connexion sur le bot**
-- [ ] **Music Bot (Partiellement Codé)**
+- [x] **Music Bot**
 
 * Côté Administrateur
 
