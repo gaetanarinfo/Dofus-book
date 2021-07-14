@@ -19,7 +19,8 @@
         "get-json": "^1.0.1",
         "long": "^4.0.0",
         "mongoose": "^5.11.14",
-        "pm2": "^4.5.2",
+        "node-cron": "^3.0.0",
+        "pm2": "^5.1.0",
         "ytdl-core": "^4.4.5"
     },
     "devDependencies": {

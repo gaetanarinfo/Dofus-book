@@ -4,8 +4,8 @@ const { discord } = require('../bot');
 module.exports = {
     embed: new Discord.MessageEmbed()
         .setColor('#0FEF2D')
-        .setTitle("🤖 Site officiel 🤖")
-        .setURL('https://www.dofus.com/')
+        .setTitle("Site internet 🤖")
+        .setURL('http://gaetan-book.fr')
         .setAuthor(discord.user.username, 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
         .setDescription('Retrouver les commandes utilisable de Dofus Book')
         .setThumbnail('https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
@@ -55,7 +55,6 @@ module.exports = {
             name: '\`🍖 !sets nomdel\'equipement\`',
             value: "Permet de voir l'equiments !"
         })
-        .setImage('https://static.ankama.com/ankama/cms/images/273/2020/01/03/1083711.w500h.jpg')
         .setTimestamp()
         .setFooter(discord.user.username, 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300')
 }

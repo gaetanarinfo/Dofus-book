@@ -5,6 +5,7 @@ const livereload = require('livereload'),
     config = require("./config.json"),
     commands = require("./commands/commands"),
     almanax = require("./json/almanax")
+cron = require('node-cron');
 
 reload.watch(__dirname + "/bots.js")
 
@@ -40,11 +41,7 @@ discord.on('ready', () => {
 
             if (generalChannel) {
                 generalChannel.join()
-                    .then(connection => {
-
-                        connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
-
-                    })
+                    .then(connection => {})
                     .catch(console.error);
             }
         }
@@ -57,33 +54,17 @@ discord.on('ready', () => {
             .then(connection => {
                 console.log('Rejoins le channel Audio');
 
-                connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
-
             })
             .catch(console.error);
 
+    }
+
+    cron.schedule('00 01 00 * * *', () => {
         // Almanax
         setInterval(() => {
             almanax()
         }, 04000000);
-
-        setInterval((res) => {
-            discord.on('ready', () => {
-
-                then(connection => {
-                        console.log('Rejoins le channel Audio');
-
-                        connection.play(('https://gaetan.store/audio/mp3/dofus.mp3'))
-
-                    })
-                    .catch(console.error);
-
-            })
-
-            console.log(res);
-        }, 3852000);
-
-    }
+    });
 
 });
 

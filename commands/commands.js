@@ -49,7 +49,7 @@ module.exports = msg => {
                                     .setDescription(u.content)
                                     .setThumbnail(u.category)
                                     .addFields({ name: 'Catégorie', value: u.cat })
-                                    .setImage(u.image)
+                                    .setImage(`http://gaetan-book.fr/${u.image}`)
                                     .setTimestamp(u.dateCreate)
                                     .setFooter(u.author, 'https://pht.qoo-static.com/DwTsGsKrvYPsC-TzKc-3dasiEgIwVOUY5wgTT94XPzcHJP-5V5pvSKZ9v1j1m85OdFfm=w300'))
                                 .catch(err => console.log(err));
